@@ -3,6 +3,7 @@ package com.example.perry.myapplication;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -85,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_random:
                 Log.i(TAG, "info");
                 Toast.makeText(getApplicationContext(),"一緒", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
