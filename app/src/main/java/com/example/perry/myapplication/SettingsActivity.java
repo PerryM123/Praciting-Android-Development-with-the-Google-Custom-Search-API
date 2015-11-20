@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
+// check
 public class SettingsActivity extends AppCompatActivity { // extends Activity is better??
     ArrayAdapter<String> adapter;
     ListView listView;
