@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/view">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:src="@drawable/feed"
+
+
+        android:id="@+id/theImageView"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:id="@+id/editText"
+        android:layout_above="@+id/searchBut"
+        android:layout_alignLeft="@+id/searchBut"
+        android:layout_alignStart="@+id/searchBut" />
+
+    <Button
+        android:id="@+id/searchBut"
+        android:text="@string/button1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/frameContainer"
+        android:layout_alignRight="@+id/theImageView"
+        android:layout_alignEnd="@+id/theImageView" />
+
+</RelativeLayout>
