@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-// this was pushed
+
 public class SettingsActivity extends AppCompatActivity { // extends Activity is better??
     ArrayAdapter<String> adapter;
     ListView listView;
@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity { // extends Activity is
     }
 
     void setUpSettings() {
-        String[] list = new String[]{"About","Link to developer"};
+        String[] list = new String[]{"About","Link to developer", "Version Number"};
         adapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, list);
 
     }

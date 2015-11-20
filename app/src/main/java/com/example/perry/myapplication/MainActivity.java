@@ -5,8 +5,6 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -16,6 +14,31 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+/**
+ * Things to do:
+ * 1) After making commits, write reports
+ * 2) Make a SettingsActivity with a library called SettingsActivity (google it)
+ * 3) Learn to make branches? instead of committing to the master?
+ * 4) Watch video about making nice and flexible relative layout Views
+ * 5) Finish learning Fragment's onAttach, onDetach, fragment stack
+ * 6) Learn how to implement the JSON from google custom search
+ * 7) If I hit Settings on the Action bar and I hit the phone's leftmost button, problem....
+ * 8) Learn RecycleView
+ * 9) Check out my Evernote with ALLLLL of the r/androiddev
+ * 10) Learn how to fix leaking Activities (AsyncTask prob,,,,)
+ * 11) Work on transitions between Activities
+ * 12) Implement MVC pattern properly
+ * 13) Write more comments??
+ * 14) Change the theme for my ultrabooks Android Studios
+ * 15) Learn GIT for Visual Studio Code
+ * 16) Add "Email developer" in About Activitiy
+ * 17) Add sounds?
+ * 18)
+ * 19)
+ * 20)
+ *
+ */
 
 public class MainActivity extends AppCompatActivity {
     final String TAG = "Braver";
