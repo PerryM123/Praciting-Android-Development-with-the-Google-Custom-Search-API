@@ -34,7 +34,7 @@ import android.widget.Toast;
  * 15) Learn GIT for Visual Studio Code
  * 16) Add "Email developer" in About Activitiy
  * 17) Add sounds?
- * 18)
+ * 18) Prepare the Github README for this
  * 19)
  * 20)
  *
