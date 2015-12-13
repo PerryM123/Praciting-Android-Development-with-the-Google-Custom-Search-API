@@ -25,6 +25,7 @@ import android.widget.Toast;
  * 6) Learn how to implement the JSON from google custom search
  * 7) If I hit Settings on the Action bar and I hit the phone's leftmost button, problem....
  * 8) Learn RecycleView
+ *    Learn Retrofit
  * 9) Check out my Evernote with ALLLLL of the r/androiddev
  * 10) Learn how to fix leaking Activities (AsyncTask prob,,,,)
  * 11) Work on transitions between Activities
@@ -33,11 +34,27 @@ import android.widget.Toast;
  * 14) Change the theme for my ultrabooks Android Studios
  * 15) Learn GIT for Visual Studio Code
  * 16) Add "Email developer" in About Activitiy
- * 17) Add sounds?
  * 18) Prepare the Github README for this
- * 19)
- * 20)
+ * 19) If MVC or MVP is not used in real life so much, focus on seperating the Activity/Fragments (View) and the Logic (Model)
+ *      Source: https://www.reddit.com/r/androiddev/comments/3frcwd/how_many_of_you_use_mvcmvp_in_your_work_projects/
+ * 20) Think about changing the background color or Tab bar colors
+ * 21) Along with sharedPreferences, we can also use, intent.putExtra("result", result);
+ * 22) Read about the many ways and situations where Activities would restart:
+ *      Link:  http://stackoverflow.com/questions/7818717/why-not-use-always-androidconfigchanges-keyboardhiddenorientation
+ * 23) Work on:
+ *        onCreate, onStart, onRestart, onResume, onFreeze, onPause, onStop, onDestroy, onAttach, onDetach
+ * 24) Should each class have a TAG for log console
+ * 25) How to use onSaveInstanceState and Bundle between Activities and Fragments
+ * 26)
+ * 27) Reading about threads - http://android-developers.blogspot.in/2009/05/painless-threading.html
+ * 28) Why transaction.addToBackStack(null);  for fragments?????
+ *     Explanation: http://sapandiwakar.in/replacing-fragments/
+ * 29) Nice example - https://gist.github.com/daichan4649/2480065
+ * 30) If the user hits BACK during retrieving JSON data, please destroy the thread
+ * 31) Find a way to count how many threads are active to avoid many of the same thread running
  *
+ * BIG THINGS TO DO:
+ * -Where do I put Async? In the Main Activity? In the fragment?
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -58,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         manager = getFragmentManager();
         transaction = manager.beginTransaction();
-        //default fragment...
+        // Our default fragment on startup is SearchFragment
         SearchFragment searchFrag = new SearchFragment();
         transaction.replace(R.id.frameContainer, searchFrag, "searchFrag");
         transaction.commit();
@@ -67,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (editText.getText().toString().length() !=0) { // it's not empty
-                    ResultsFragment resultFrag = new ResultsFragment();
+                    SearchFragment resultFrag = new SearchFragment();
                     transaction = manager.beginTransaction();
-                    transaction.replace(R.id.frameContainer, resultFrag, "ResultFragment");
+                    transaction.replace(R.id.frameContainer, resultFrag, "SearchFragment");
                     transaction.commit();
                 } else  {
                     Toast.makeText(getApplicationContext(), "検索したいことを記入してください", Toast.LENGTH_LONG).show();
